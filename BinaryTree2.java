@@ -3,8 +3,6 @@ class BinaryTree2{
 	static Node root;
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-
-
 		addToBT("ritika", 19);
 		addToBT("cool guy", 21);
 		addToBT("rishahb", 17);
@@ -13,7 +11,6 @@ class BinaryTree2{
 		addToBT("rishahb", 18);
 		addToBT("rishahb", 12);
 		//addToBT("rishahb", 18);
-		//addToBT("anushka", 1);
 		//addToBT("rishahb", 2);
 		inOrder(root);
 		System.out.println(isBalanced(root));
@@ -92,18 +89,19 @@ class BinaryTree2{
     }
 
 
+    static void removeNode(int val){
+    	
+    }
     static public void inOrder(Node root){
     	if(root!=null){
     		inOrder(root.leftChild);
     		System.out.println(root);
-
     		inOrder(root.rightChild);
     	}
     }
     static public void preOrder(Node root){
     	if(root!=null){
     		System.out.println(root);
-
     		inOrder(root.leftChild);
     		inOrder(root.rightChild);
     	}
@@ -111,9 +109,7 @@ class BinaryTree2{
     static public void postOrder(Node root){
     	if(root!=null){
     		inOrder(root.leftChild);
-
     		inOrder(root.rightChild);
-    		
     		System.out.println(root);
     	}
     }
@@ -129,7 +125,6 @@ class Node{
 		this.name = name;
 		this.val = val;
 	}
-
 	public String toString(){
 		return name+"has a value of " + val;
 	}
