@@ -6,7 +6,7 @@ class BinaryTree2{
 
 
 		addToBT("ritika", 19);
-		addToBT("anushka", 21);
+		addToBT("cool guy", 21);
 		addToBT("rishahb", 17);
 		//addToBT("ritika", 4);
 		addToBT("rishahb", 16);
@@ -100,6 +100,24 @@ class BinaryTree2{
     		inOrder(root.rightChild);
     	}
     }
+    static public void preOrder(Node root){
+    	if(root!=null){
+    		System.out.println(root);
+
+    		inOrder(root.leftChild);
+    		inOrder(root.rightChild);
+    	}
+    }
+    static public void postOrder(Node root){
+    	if(root!=null){
+    		inOrder(root.leftChild);
+
+    		inOrder(root.rightChild);
+    		
+    		System.out.println(root);
+    	}
+    }
+
 }
 
 class Node{
